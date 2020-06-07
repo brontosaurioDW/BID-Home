@@ -1,13 +1,9 @@
 // Variables
 
-@pr-white: #fff;
-@pr-bidblue: #004E70;
-@pr-grey: #F7F7F7;
-@pr-dkgrey: #E2E2E2;
-@pr-darker: #3C3B3B;
-@pr-link: #0F9DD3;
-@pr-orange: #F9B433;
-@pr-green: #33AC42;
+@hm_white: #fff;
+@hm_bidblue: #215B9C;
+@hm_bidorange: #FFA839;
+@hm_bidlgblue: #29ABE2;
 
 
 // HTML
@@ -15,8 +11,6 @@
 html {
     font-family: 'GothamHTF-Book', sans-serif;
     font-size: 12px;
-    background-color: @pr-dkgrey;
-    color: @pr-darker;
 }
 
 
@@ -29,11 +23,6 @@ html {
     display: flex;
 }
 
-.d-grid {
-    display: -ms-grid;
-    display: grid;
-}
-
 .space-between {
     justify-content: space-between;
 }
@@ -44,4 +33,260 @@ html {
 
 // Titles
 
+.slide-title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: @hm_bidblue;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
 // Buttons
+
+.btn {
+    display: block;
+    margin: 30px auto;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 2px solid;
+    border-radius: 0;
+}
+
+.btn-primary {
+    color: @hm_bidlgblue;
+    border-color: @hm_bidlgblue;
+    background-color: transparent;
+}
+
+.btn-primary:hover {
+    color: @hm_white;
+    background-color: @hm_bidlgblue;
+    border-color: @hm_bidlgblue;
+    text-decoration: none;
+}
+
+
+// Layout
+
+.hm-section {
+    margin: 30px 0 60px;
+}
+
+
+// Slider general
+
+
+.slick-dots {
+    width: 300px;
+}
+
+.slick-dots li button:before {
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    border-radius: 50%;
+    background-color: @hm_bidblue;
+    
+}
+
+.slick-dots li.slick-active {
+    margin: 0 10px;
+}
+
+.slick-dots li.slick-active button:before {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    color: transparent;
+    background-color: transparent;
+    border: 7px solid @hm_bidblue;
+}
+
+
+
+
+// Main Slider
+
+
+.slick-dotted.slick-slider.home-slider {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.home-slider .slide {
+    position: relative;
+}
+
+.home-slider .slide img {
+    position: absolute;
+    bottom: -50px;
+}
+
+.home-slider .slide .slide-content {
+    position: absolute;
+    bottom: 22%;
+    right: 0;
+    padding: 60px 30px;
+    background-color: @hm_white;
+    color: @hm_bidblue;
+    opacity: .8;
+}
+
+.home-slider .slide .slide-content:hover {
+    color: @hm_bidlgblue;
+    text-decoration: none;
+}
+
+.home-slider .slide .slide-content .slide-title {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.home-slider .slide .slide-content .slide-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -90px;
+    bottom: -25px;
+    width: 200px;
+    height: 10px;
+    background-color: @hm_bidorange;
+}
+
+.home-slider .slick-arrow {
+
+    position: absolute;
+    bottom: 15%;
+    top: auto;
+    width: 15px;
+    height: auto;
+    z-index: 2;
+
+}
+
+.home-slider .slick-prev {
+    left: 0;
+}
+
+.home-slider .slick-next {
+    right: 0;
+}
+
+.home-slider .slick-dots {
+    bottom: 75px;
+    right: 550px;
+}
+
+.home-slider .slick-dots li button {
+    color: @hm_bidblue;;
+}
+
+
+
+
+// Sub nav
+
+.home-subnav {
+    padding: 15px 0;
+    background-color: @hm_bidblue;
+}
+
+.home-subnav .nav-left a,
+.home-subnav .nav-right a {
+    color: @hm_white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+ }
+
+
+ // Video
+
+ // NOTE: This code should be deleted in production as it's just a placeholder
+ .hm-video {
+    width: 100%;
+    height: 445px;    
+    background-image: url(../img/placeholders/video-placeholder.png);
+    background-size: cover;
+ }
+
+
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+    // Main Slider
+
+    .home-slider .slide {
+        position: relative;
+        height: 700px;
+    }
+
+    .home-slider .slide .slide-content {
+        width: 60%;
+        padding: 30px 240px 75px 60px;
+        
+    }
+
+    .home-slider .slide .slide-content .slide-title {
+
+    }
+
+    .home-slider .slide .slide-content .slide-info {
+        font-size: 1.4rem;
+    }
+
+    .home-slider .slide .slide-content .slide-anchor {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .home-slider .slide .slide-content .slide-anchor::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-left: 5px;
+        background-image: url(../img/icons/right.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    // Sub nav
+
+    .home-subnav .nav-left a,
+    .home-subnav .nav-right a {
+        margin: 0 30px;
+    }   
+     
+    .home-subnav .nav-left {
+        text-align: right;
+    }
+
+    .home-subnav .nav-right {
+        text-align: left;
+    }
+
+
+
+}
+
+@media (min-width: 1200px) {
+
+}

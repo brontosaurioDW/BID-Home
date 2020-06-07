@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.mv-slider').slick({
+	$('.js-home-slider').slick({
 		dots: true,
 		infinite: true,
 		speed: 300,
@@ -28,7 +28,8 @@ $(document).on('click', '.js-pr-btn-banner', function (event) {
 });
 
 
-$('.js-menu-item > a').click(function() {
-    $('.js-menu-item').removeClass('active');
-    $(this).parent().addClass('active');
-});
+
+
+
+
+
