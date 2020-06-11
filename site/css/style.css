@@ -57,6 +57,17 @@ h2 {
   border-color: #fff;
   text-decoration: none;
 }
+.btn-alt {
+  color: #215B9C;
+  border-color: #215B9C;
+  background-color: transparent;
+}
+.btn-alt:hover {
+  color: #fff;
+  background-color: #215B9C;
+  border-color: #215B9C;
+  text-decoration: none;
+}
 .hm-section {
   margin: 30px 0 60px;
 }
@@ -99,12 +110,13 @@ h2 {
   width: 20px;
   height: 30px;
 }
-.slick-dotted.slick-slider.home-slider {
+.home-slider {
   position: relative;
   margin-bottom: 0;
 }
 .home-slider .slide {
   position: relative;
+  height: 700px;
 }
 .home-slider .slide img {
   position: absolute;
@@ -120,7 +132,7 @@ h2 {
   opacity: 0.8;
 }
 .home-slider .slide .slide-content:hover {
-  color: #29ABE2;
+  opacity: 0.8;
   text-decoration: none;
 }
 .home-slider .slide .slide-content .slide-title {
@@ -132,29 +144,37 @@ h2 {
   content: "";
   display: block;
   position: absolute;
-  left: -90px;
+  left: -30px;
   bottom: -25px;
-  width: 200px;
+  width: 150px;
   height: 10px;
   background-color: #FFA839;
 }
+.home-slider .slide .slide-content .slide-info {
+  font-size: 1.4rem;
+}
+.home-slider .slide .slide-content .slide-anchor {
+  display: block;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.home-slider .slide .slide-content .slide-anchor.home-slider .slide .slide-content .slide-anchor::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 5px;
+  background-image: url(../img/icons/right.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .home-slider .slick-arrow {
   position: absolute;
-  bottom: 15%;
-  top: auto;
   width: 15px;
   height: auto;
   z-index: 2;
-}
-.home-slider .slick-prev {
-  left: 0;
-}
-.home-slider .slick-next {
-  right: 0;
-}
-.home-slider .slick-dots {
-  bottom: 75px;
-  right: 550px;
 }
 .home-slider .slick-dots li button {
   color: #215B9C;
@@ -211,7 +231,7 @@ h2 {
 }
 iframe {
   width: 100%;
-  height: 270px;
+  height: 250px;
 }
 .hm-events-container {
   background-image: url(../img/sections/line-1.png);
@@ -355,42 +375,88 @@ iframe {
   color: #29ABE2;
 }
 .hm-implives-container .hm-implives-slider {
-  margin: 60px -15px 90px;
-  padding: 15px;
+  margin: 60px 0 90px;
+  padding: 15px 0;
 }
 .hm-implives-container .hm-implives-slider .hm-il-slide {
+  position: relative;
+  padding: 45px 0;
   background-position: center center;
   background-size: cover;
 }
 .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
+  height: 350px;
+  padding-bottom: 60px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+.hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer {
+  position: relative;
+  text-align: center;
+}
+.hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer .hm-il-title {
+  display: inline-block;
+}
+.hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer .hm-il-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 490px;
+  bottom: 45px;
+  width: 150px;
+  height: 6px;
+  background-color: #FFA839;
+}
+.hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-info {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #215B9C;
+}
+.hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer:after {
+  content: url(../img/placeholders/mejorando-vidas-logo.png);
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+}
+.hm-implives-container .hm-implives-slider .slick-prev {
+  left: 290px;
+  z-index: 2;
+}
+.hm-implives-container .hm-implives-slider .slick-next {
+  right: 290px;
+}
+.hm-implives-container .hm-implives-slider .slick-dots {
+  width: 100%;
+  bottom: 105px;
+}
+.hm-social-container .hm-social-icon {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+}
 @media (min-width: 992px) {
-  .home-slider .slide {
-    position: relative;
-    height: 700px;
-  }
   .home-slider .slide .slide-content {
     width: 60%;
-    padding: 30px 240px 75px 60px;
+    padding: 30px 240px 80px 120px;
   }
-  .home-slider .slide .slide-content .slide-info {
-    font-size: 1.4rem;
+  .home-slider .slide .slide-content .slide-title::after {
+    left: -160px;
+    bottom: -25px;
+    width: 240px;
   }
-  .home-slider .slide .slide-content .slide-anchor {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 500;
+  .home-slider .slick-arrow {
+    bottom: 40%;
+    top: auto;
   }
-  .home-slider .slide .slide-content .slide-anchor::after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-left: 5px;
-    background-image: url(../img/icons/right.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+  .home-slider .slick-prev {
+    left: 800px;
+  }
+  .home-slider .slick-next {
+    right: 200px;
+  }
+  .home-slider .slick-dots {
+    bottom: 200px;
+    right: 500px;
   }
   .home-subnav .nav-left a,
   .home-subnav .nav-right a {
