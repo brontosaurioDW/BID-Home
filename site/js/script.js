@@ -15,7 +15,27 @@ $(document).ready(function(){
 		slidesToShow: 4,
 		adaptiveHeight: false ,
 		nextArrow:"<img class='a-right control-c next slick-next' src='img/icons/right.png'>",
-		prevArrow:"<img class='a-left control-c prev slick-prev' src='img/icons/left.png'>"
+		prevArrow:"<img class='a-left control-c prev slick-prev' src='img/icons/left.png'>",
+		responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
 	});
 	$('.js-hm-docs-slider').slick({
 		dots: true,

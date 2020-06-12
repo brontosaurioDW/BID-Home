@@ -39,7 +39,7 @@ html {
 }
 
 h2 {
-    margin: 30px 0 60px;
+    margin: 0 0 30px;
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: @hm_bidblue;
@@ -66,7 +66,10 @@ h2 {
     background-color: transparent;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover {
     color: @hm_white;
     background-color: @hm_bidlgblue;
     border-color: @hm_bidlgblue;
@@ -79,7 +82,10 @@ h2 {
     background-color: transparent;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary:active:hover {
     color: @hm_bidblue;
     background-color: @hm_white;
     border-color: @hm_white;
@@ -92,7 +98,10 @@ h2 {
     background-color: transparent;
 }
 
-.btn-alt:hover {
+.btn-alt:hover,
+.btn-alt:focus,
+.btn-alt:active,
+.btn-alt:active:hover {
     color: @hm_white;
     background-color: @hm_bidblue;
     border-color: @hm_bidblue;
@@ -103,7 +112,7 @@ h2 {
 // Layout
 
 .hm-section {
-    margin: 30px 0 60px;
+    margin: 30px 0;
 }
 
 
@@ -111,7 +120,7 @@ h2 {
 
 .hm-section {
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 // Slider general
@@ -157,6 +166,7 @@ h2 {
 .slick-next {
     width: 20px;
     height: 30px;
+    z-index: 2;
 }
 
 
@@ -167,22 +177,21 @@ h2 {
 
 .home-slider {
     position: relative;
-    margin-bottom: 0;
+
+    &.slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
 
     .slide {
         position: relative;
         height: 700px;
-
-        img {
-            position: absolute;
-            bottom: -50px;
-        }
+        width: 100vw;
+        background-size: cover;
 
         .slide-content {
-            position: absolute;
-            bottom: 22%;
-            right: 0;
-            padding: 60px 30px;
+            height: 500px;
+            margin: 120px 0 0;
+            padding: 30px 60px;
             background-color: @hm_white;
             color: @hm_bidblue;
             opacity: .8;
@@ -194,16 +203,14 @@ h2 {
 
             .slide-title {
                 position: relative;
-                margin-bottom: 45px;
-                text-align: left;
+                margin-bottom: 30px;
+                text-align: center;
 
                 &::after {
                     content: "";
                     display: block;
-                    position: absolute;
-                    left: -30px;
-                    bottom: -25px;
-                    width: 150px;
+                    margin: 15px auto;
+                    width: 40%;
                     height: 10px;
                     background-color: @hm_bidorange;
                 }
@@ -211,16 +218,18 @@ h2 {
 
             .slide-info {
                 font-size: 1.4rem;
+                text-align: center;
             }
 
             .slide-anchor {
                 display: block;
                 margin-top: 15px;
                 text-transform: uppercase;
+                text-align: center;
                 font-size: 1.4rem;
                 font-weight: 500;
 
-                &&::after {
+                &::after {
                     content: "";
                     width: 12px;
                     height: 12px;
@@ -238,17 +247,21 @@ h2 {
         position: absolute;
         width: 15px;
         height: auto;
-        z-index: 2;
+
+        &.slick-prev {
+            left: 15px;
+        }
+        &.slick-next {
+            right: 15px;
+        }
     }
 
-    .slick-dots li button {
-        color: @hm_bidblue;
+    .slick-dots {
+        width: 100%;
+        position: absolute;
+        bottom: 120px;
     }
 }
-
-
-
-
 
 
 // Sub nav
@@ -256,19 +269,19 @@ h2 {
 .home-subnav {
     padding: 15px 0;
     background-color: @hm_bidblue;
+
+    .nav-left, 
+    .nav-right {
+        text-align: center;
+
+        a {
+            color: @hm_white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.4rem;
+         }
+    }
 }
-
-.home-subnav .nav-left a,
-.home-subnav .nav-right a {
-    color: @hm_white;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.8rem;
- }
-
-
-
-
 
 
 
@@ -278,9 +291,10 @@ h2 {
  // NOTE: This code should be deleted in production as it's just a placeholder
  .hm-video {
     width: 100%;
-    height: 445px;    
-    background-image: url(../img/placeholders/video-placeholder.png);
-    background-size: cover;
+    height: auto;
+    img {
+        max-width: 100%;
+    }
  }
 
 
@@ -294,47 +308,50 @@ h2 {
 .hm-pastevents-container {
     background-image: url(../img/sections/line-2.png);
     background-repeat: no-repeat;
+
+    .hm-pstevent-image {
+       position: relative;
+       overflow: hidden;
+       margin-bottom: 15px;
+    }
+
+    .hm-pstevent-bg {
+        width: 100%;
+        height: auto;
+    }
+
+    .hm-pstevent-title {
+       position: absolute;
+       top: 30px;
+       left: 0;
+       width: 100%;
+       padding: 10px;
+       letter-spacing: 5px;
+       font-size: 1.2rem;
+       line-height: 1.8rem;
+       text-transform: uppercase;
+       text-align: center;
+       color: @hm_white;
+       background: transparent;
+
+       .play-icon {
+           display: block;
+            width: 37px;
+            height: 37px;
+            margin: 10px auto;
+            background-image: url(../img/icons/play.png); 
+       }
+       
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
 }
 
 
-.hm-pstevent-image {
-   position: relative;
-   overflow: hidden;
-}
-
-.hm-pstevent-bg {
-    width: 100%;
-    height: auto;
-}
-
-.hm-pstevent-title {
-   position: absolute;
-   top: 30px;
-   left: 0;
-   width: 100%;
-   padding: 10px;
-   letter-spacing: 5px;
-   font-size: 1.2rem;
-   line-height: 1.8rem;
-   text-transform: uppercase;
-   text-align: center;
-   color: @hm_white;
-   background: transparent;
-
-   .play-icon {
-       display: block;
-        width: 37px;
-        height: 37px;
-        margin: 10px auto;
-        background-image: url(../img/icons/play.png); 
-   }
-   
-}
-
-iframe {
-    width: 100%;
-    height: 250px;
-}
 
 
 
@@ -350,7 +367,7 @@ iframe {
     
 
         .hm-event-slide {
-            padding: 0 15px;
+            padding: 0 45px;
 
             .hm-event {
                 height: 350px;
@@ -403,7 +420,14 @@ iframe {
 
         .slick-prev, 
         .slick-next {
-            top: 45%;
+            top: 42%;
+        }
+
+        .slick-prev {
+            left: 15px;
+        }
+        .slick-next {
+            right: 15px;
         }
 
         .slick-dots {
@@ -421,42 +445,65 @@ iframe {
 // Documents
 
 .hm-docs-container {
-    background-image: url(../img/sections/documents_bg.png);
+    background-image: url(../img/sections/documents_bg_mobile.png);
     background-repeat: no-repeat;
+    background-size: cover;
 
     .hm-docs-slider {
-        margin: 60px -15px 90px;
+        margin: 15px 0 45px;
         padding: 15px;
 
         .hm-dc-img {
             width: 100%;
-            height: 370px;
+            height: 200px;
+            margin-bottom: 15px;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
         }
 
-        .hm-dc-title {
-            color: @hm_white;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid @hm_white;
-            text-align: left;
-        }
+        .hm-dc-infocontainer {
+            padding: 0 30px 0;
+            .hm-dc-title {
+                color: @hm_white;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid @hm_white;
+                text-align: center;
+            }
 
-        .hm-dc-info {
-            color: @hm_white;
-            font-size: 1.6rem;
-            line-height: 2.2rem;
-            text-align: left;
-        }
+            .hm-dc-info {
+                color: @hm_white;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                text-align: center;
+            }
 
-        .btn {
-            margin: 30px 0;
+            .btn {
+                margin: 30px auto;
+            }
         }
 
         .slick-dots {
             width: 100%;
+            left: 0;
+            bottom: 5px;
+
+            li button:before {
+                background-color: @hm_white;
+            }
+
+            li.slick-active button:before {
+                background-color: @hm_bidblue;
+                border-color: @hm_white;
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
         }
 
     }
@@ -475,14 +522,13 @@ iframe {
 
         .hm-hg-title {
             display: inline-block;
+            margin-bottom: 30px;
 
             &:after {
                 content: "";
                 display: block;
-                position: absolute;
-                left: 100px;
-                bottom: 45px;
-                width: 258px;
+                margin: 10px auto;
+                width: 30%;
                 height: 6px;
                 background-color: @hm_bidorange;
             }
@@ -490,6 +536,7 @@ iframe {
     }
 
     .hm-hg-item {
+        margin-bottom: 15px;
         text-align: center;
         .hm-hg-icon {
             margin-bottom: 10px;
@@ -532,7 +579,7 @@ iframe {
 .hm-implives-container {
 
     .hm-implives-slider {
-        margin: 60px 0 90px;
+        margin: 30px 0 90px;
         padding: 15px 0;
 
         .hm-il-slide {
@@ -542,8 +589,8 @@ iframe {
             background-size: cover;
 
             .hm-il-infocontainer {
-                height: 350px;
-                padding-bottom: 60px;
+                height: 600px;
+                padding: 30px 45px 120px;
                 background-color: rgba(255,255,255,0.8);
 
                 .hm-il-titlecontainer {
@@ -556,10 +603,8 @@ iframe {
                         &:after {
                             content: "";
                             display: block;
-                            position: absolute;
-                            left: 490px;
-                            bottom: 45px;
-                            width: 150px;
+                            margin: 10px auto;
+                            width: 30%;
                             height: 6px;
                             background-color: @hm_bidorange;
                         }
@@ -583,17 +628,16 @@ iframe {
             }
         }
         .slick-prev {
-            left: 290px;
-            z-index: 2;
+            left: 15px;
         }
 
         .slick-next {
-            right: 290px;
+            right: 15px;
         }
 
         .slick-dots {
             width: 100%;
-            bottom: 105px;
+            bottom: 160px;
         }
     }
 
@@ -604,8 +648,14 @@ iframe {
     .hm-social-icon {
         display: block;
         width: 50px;
-        margin: 0 auto;
+        margin: 0 auto 30px;
     }
+
+// This code should be deleted in production
+.social-placeholder {
+    margin-bottom: 45px;
+}
+
 
 }
 
@@ -620,6 +670,26 @@ iframe {
 
 @media (min-width: 992px) {
 
+
+    // General
+
+    h2 {
+       margin: 30px 0 60px;
+    }
+
+    // Backgrounds
+
+    .hm-section {
+        background-repeat: no-repeat;
+    }
+
+    // Layout
+
+    .hm-section {
+        margin: 30px 0 60px;
+    }
+
+
     // Main slider
 
 
@@ -628,6 +698,8 @@ iframe {
         .slide {
             .slide-content {
                 width: 60%;
+                bottom: 22%;
+                right: 0;
                 padding: 30px 240px 80px 120px;
 
                 .slide-title {
@@ -685,6 +757,131 @@ iframe {
     .home-subnav .nav-right {
         text-align: left;
     }
+
+
+
+    .home-subnav .nav-left a,
+.home-subnav .nav-right a {
+    color: @hm_white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+ }
+
+
+
+ // Next events
+
+ .hm-event-slide {
+            padding: 0 15px;
+        }
+
+
+
+
+// Documents
+
+.hm-docs-container {
+    background-image: url(../img/sections/documents_bg.png);
+    .hm-docs-slider {
+        margin: 60px -15px 90px;
+        padding: 15px;
+
+        .hm-dc-img {
+            width: 100%;
+            height: 370px;
+        }
+
+        .hm-dc-infocontainer {
+            padding: 0;
+        }
+    }
+}
+
+
+// Highlights
+
+.hm-highlights-container {
+
+    .hm-hg-titlecontainer {
+        position: relative;
+        text-align: center;
+
+        .hm-hg-title {
+            display: inline-block;
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 100px;
+                bottom: 45px;
+                width: 258px;
+                height: 6px;
+                background-color: @hm_bidorange;
+            }
+        }
+    }
+}
+
+
+
+
+
+// Improving lives
+
+
+.hm-implives-container {
+
+    .hm-implives-slider {
+        margin: 30px 0 90px;
+        padding: 15px 0;
+
+        .hm-il-slide {
+            position: relative;
+            padding: 45px 0;
+            background-position: center center;
+            background-size: cover;
+
+            .hm-il-infocontainer {
+                height: 350px;
+
+                .hm-il-titlecontainer {
+                    position: relative;
+                    text-align: center;
+
+                    .hm-il-title {
+                        display: inline-block;
+
+                        &:after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left: 490px;
+                            bottom: 45px;
+                            width: 150px;
+                            height: 6px;
+                            background-color: @hm_bidorange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+            left: 290px;
+        }
+
+        .slick-next {
+            right: 290px;
+        }
+
+        .slick-dots {
+            width: 100%;
+            bottom: 105px;
+        }
+}
 
 
 
