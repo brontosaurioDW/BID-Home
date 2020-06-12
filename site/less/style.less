@@ -140,6 +140,7 @@ h2 {
             top: 5px;
             border-radius: 50%;
             background-color: @hm_bidblue;
+            color: transparent;
             opacity: .8;
             
         }
@@ -184,14 +185,14 @@ h2 {
 
     .slide {
         position: relative;
-        height: 700px;
+        height: 720px;
         width: 100vw;
         background-size: cover;
 
         .slide-content {
-            height: 500px;
+            height: 540px;
             margin: 120px 0 0;
-            padding: 30px 60px;
+            padding: 30px 45px;
             background-color: @hm_white;
             color: @hm_bidblue;
             opacity: .8;
@@ -259,7 +260,7 @@ h2 {
     .slick-dots {
         width: 100%;
         position: absolute;
-        bottom: 120px;
+        bottom: 100px;
     }
 }
 
@@ -278,7 +279,7 @@ h2 {
             color: @hm_white;
             text-transform: uppercase;
             font-weight: 500;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
          }
     }
 }
@@ -296,10 +297,6 @@ h2 {
         max-width: 100%;
     }
  }
-
-
-
-
 
 
 
@@ -322,13 +319,13 @@ h2 {
 
     .hm-pstevent-title {
        position: absolute;
-       top: 30px;
+       top: 0;
        left: 0;
        width: 100%;
        padding: 10px;
        letter-spacing: 5px;
-       font-size: 1.2rem;
-       line-height: 1.8rem;
+       font-size: 1rem;
+       line-height: 1.4rem;
        text-transform: uppercase;
        text-align: center;
        color: @hm_white;
@@ -350,8 +347,6 @@ h2 {
     }
 
 }
-
-
 
 
 
@@ -434,7 +429,7 @@ h2 {
             position: relative;
             bottom: unset;
             width: 100%;
-            margin: 50px 0;
+            margin: 30px 0;
         }
 
     }
@@ -573,7 +568,6 @@ h2 {
 }
 
 
-
 // Improving Lives
 
 .hm-implives-container {
@@ -589,8 +583,8 @@ h2 {
             background-size: cover;
 
             .hm-il-infocontainer {
-                height: 600px;
-                padding: 30px 45px 120px;
+                height: 650px;
+                padding: 30px 30px 120px;
                 background-color: rgba(255,255,255,0.8);
 
                 .hm-il-titlecontainer {
@@ -643,6 +637,9 @@ h2 {
 
 }
 
+
+// Social
+
 .hm-social-container {
 
     .hm-social-icon {
@@ -654,6 +651,8 @@ h2 {
 // This code should be deleted in production
 .social-placeholder {
     margin-bottom: 45px;
+    max-width: 100%;
+    width: 100%;
 }
 
 
@@ -662,9 +661,191 @@ h2 {
 
 @media (min-width: 576px) {
 
+    // Main Slider
+
+    .home-slider {
+        .slide {
+            height: 510px;
+            .slide-content {
+                height: 350px;
+            }
+        }
+    }
+
+
+    // Past events
+
+.hm-pastevents-container {
+    .hm-pstevent-title {
+       padding: 120px 30px;
+       font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
+
+
+    // Improving Lives
+
+    .hm-implives-container {
+        .hm-implives-slider {
+            .hm-il-slide {
+                .hm-il-infocontainer {
+                    height: 500px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
 @media (min-width: 768px) {
+
+
+    // Main Slider
+
+    .home-slider {
+        .slide {
+            height: 520px;
+
+            .slide-content {
+                height: 350px;
+                margin: 120px 35px 0;
+                padding: 30px 90px;
+            }
+        }
+
+        .slick-arrow {
+            top: 300px;
+            &.slick-prev {
+                left: 60px;
+            }
+            &.slick-next {
+                right: 60px;
+            }
+        }
+
+        .slick-dots {
+            width: 100%;
+            position: absolute;
+            bottom: 100px;
+        }
+
+    }
+
+
+    // Past events
+
+    .hm-pastevents-container {
+        .hm-pstevent-title {
+            top: 25%;
+            padding: 45px;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+
+
+    // Documents
+
+    .hm-docs-container {
+
+        .hm-docs-slider {
+            padding: 15px 0;
+            .hm-docs-slider {
+                .hm-dc-infocontainer {
+                    padding: 0 60px 0;
+                    .hm-dc-img {
+                        height: 300px;
+                    }
+                }    
+            } 
+
+        }
+
+        .slick-prev, 
+        .slick-next {
+            top: 65%;
+        }
+
+    }
+
+
+
+
+    // Documents
+
+    .hm-docs-container {
+        .hm-docs-slider {
+            padding: 15px 0;
+
+            .hm-dc-img {
+                height: 300px;
+            }
+
+            .hm-dc-infocontainer {
+                margin-top: 30px;
+                padding: 0 60px 0;
+            }
+        }
+    }
+
+
+    // Highlights
+
+    .hm-highlights-container {
+        .hm-hg-item {
+            height: 240px;
+        }
+    }
+
+
+    // Improving Lives
+
+    .hm-implives-container {
+        .hm-implives-slider {
+            .hm-il-slide {
+                .hm-il-infocontainer {
+                    height: 420px;
+                    .hm-il-titlecontainer {
+
+
+                        .hm-il-title {
+
+
+                            &:after {
+
+                            }
+                        }
+                    }
+
+                    .hm-il-info {
+
+                    }
+
+                    &:after {
+
+                    }
+                }
+            }
+            .slick-prev {
+
+            }
+
+            .slick-next {
+
+            }
+
+            .slick-dots {
+                bottom: 150px;
+            }
+        }
+
+    }
+
 
 }
 
@@ -694,20 +875,33 @@ h2 {
 
 
     .home-slider {
-
         .slide {
+            height: 520px;
             .slide-content {
-                width: 60%;
-                bottom: 22%;
+                position: absolute;
+                width: 70%;
+                bottom: 12%;
                 right: 0;
-                padding: 30px 240px 80px 120px;
+                margin: 0;
+                padding: 30px 60px 80px;
 
                 .slide-title {
+                    margin-bottom: 45px;
+                    text-align: left;
                     &::after {
-                        left: -160px;
-                        bottom: -25px;
-                        width: 240px;
+                        position: absolute;
+                        left: -100px;
+                        bottom: -15px;
+                        width: 200px;
+                        margin: 0;
                     }
+                }
+
+                .slide-info {
+                    text-align: left;
+                }
+                .slide-anchor {
+                    text-align: left;
                 }
             }
         
@@ -716,87 +910,137 @@ h2 {
         .slick-arrow {
             bottom: 40%;
             top: auto;
-        }
+            &.slick-prev {
+                right: 67%;
+                left: auto;
+            }
 
-        .slick-prev {
-            left: 800px;
-        }
-
-        .slick-next {
-            right: 200px;
+            &.slick-next {
+                right: 30px;
+            }
         }
 
         .slick-dots {
-            bottom: 200px;
-            right: 500px;
+            width: 200px;
+            bottom: 100px;
+            right: 27%;
         }
 
     }
-
-
-
-
-
-
-
-
 
 
 
     // Sub nav
 
-    .home-subnav .nav-left a,
-    .home-subnav .nav-right a {
-        margin: 0 30px;
-    }   
-     
-    .home-subnav .nav-left {
-        text-align: right;
-    }
+    .home-subnav {
+        margin: -5px 0 0;
 
-    .home-subnav .nav-right {
-        text-align: left;
-    }
+        .nav-left a,
+        .nav-right a {
+            margin: 0 30px;
+            color: @hm_white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.8rem;
+        }  
 
-
-
-    .home-subnav .nav-left a,
-.home-subnav .nav-right a {
-    color: @hm_white;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.8rem;
- }
-
-
-
- // Next events
-
- .hm-event-slide {
-            padding: 0 15px;
+        .nav-left {
+            text-align: right;
         }
-
-
-
-
-// Documents
-
-.hm-docs-container {
-    background-image: url(../img/sections/documents_bg.png);
-    .hm-docs-slider {
-        margin: 60px -15px 90px;
-        padding: 15px;
-
-        .hm-dc-img {
-            width: 100%;
-            height: 370px;
+        .nav-right {
+            text-align: left;
         }
+    }  
 
-        .hm-dc-infocontainer {
-            padding: 0;
+
+
+// Past events
+
+    .hm-pastevents-container {
+        .hm-pstevent-title {
+            top: 0;
+            padding: 20px;
+            margin: 0;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
         }
     }
-}
+
+
+    // Next events
+
+
+    .hm-events-container {
+        .hm-events-slider {
+            .hm-event-slide {
+                padding: 0 15px;
+            }
+            .slick-prev {
+                left: -15px;
+            }
+            .slick-next {
+                right: -15px;
+            }
+        }
+    }
+
+
+
+    // Documents
+
+    .hm-docs-container {
+        background-image: url(../img/sections/documents_bg.png);
+        .hm-docs-slider {
+            margin: 30px -15px;
+            padding: 15px;
+
+            .hm-dc-img {
+                width: 100%;
+                height: 370px;
+            }
+
+            .hm-dc-infocontainer {
+                padding: 0;
+
+                .hm-dc-title {
+                    text-align: left;
+                }
+
+                .hm-dc-info {
+                    text-align: left;
+                }
+
+                .btn {
+                    margin: 30px 0;
+                }
+            }
+
+            .slick-dots {
+                bottom: 30px;
+
+                li button:before {
+                    background-color: @hm_bidblue;
+                }
+
+                li.slick-active button:before {
+                    background-color: @hm_white;
+                    border-color: @hm_bidblue;
+                }
+            }
+
+            .slick-prev,
+            .slick-next {
+                top: 46%;
+            }
+
+            .slick-prev {
+                left: -30px;
+            }
+            .slick-next {
+                right: -30px;
+            }
+        }
+    }
 
 
 // Highlights
@@ -804,21 +1048,13 @@ h2 {
 .hm-highlights-container {
 
     .hm-hg-titlecontainer {
-        position: relative;
-        text-align: center;
-
         .hm-hg-title {
-            display: inline-block;
+            margin-bottom: 40px;
 
             &:after {
-                content: "";
-                display: block;
                 position: absolute;
                 left: 100px;
-                bottom: 45px;
-                width: 258px;
-                height: 6px;
-                background-color: @hm_bidorange;
+                bottom: 12px;
             }
         }
     }
@@ -844,43 +1080,31 @@ h2 {
             background-size: cover;
 
             .hm-il-infocontainer {
-                height: 350px;
 
                 .hm-il-titlecontainer {
-                    position: relative;
-                    text-align: center;
-
                     .hm-il-title {
-                        display: inline-block;
-
+                        margin-bottom: 30px;
                         &:after {
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            left: 490px;
-                            bottom: 45px;
-                            width: 150px;
-                            height: 6px;
-                            background-color: @hm_bidorange;
+                            width: 190px;
                         }
                     }
                 }
             }
         }
-    }
 
-    .slick-prev {
-            left: 290px;
+        .slick-prev {
+            left: 15px;
         }
 
         .slick-next {
-            right: 290px;
+            right: 15px;
         }
 
         .slick-dots {
             width: 100%;
-            bottom: 105px;
+            bottom: 130px;
         }
+    }
 }
 
 
@@ -888,5 +1112,59 @@ h2 {
 }
 
 @media (min-width: 1200px) {
+
+    // Main slider
+
+    .home-slider {
+
+        .slide {
+            height: 700px;
+            .slide-content {
+                position: absolute;
+                width: 65%;
+                height: 360px;
+                bottom: 20%;
+                padding: 30px 240px 80px 120px;
+
+                .slide-title {
+                    &::after {
+                        left: -160px;
+                        bottom: -25px;
+                        width: 240px;
+                    }
+                }
+            }
+        
+        }
+
+        .slick-arrow {
+            bottom: 40%;
+            top: auto;
+
+            &.slick-prev {
+                right: 60%;
+            }
+
+            &.slick-next {
+                right: 11%;
+            }
+        }
+
+        .slick-dots {
+            bottom: 190px;
+            right: 500px;
+        }
+
+    }
+
+
+    // Past events
+
+    .hm-pastevents-container {
+        .hm-pstevent-title {
+            padding: 35px 20px;
+        }
+    }
+
 
 }

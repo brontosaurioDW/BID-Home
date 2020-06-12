@@ -98,6 +98,7 @@ h2 {
   top: 5px;
   border-radius: 50%;
   background-color: #215B9C;
+  color: transparent;
   opacity: 0.8;
 }
 .slick-dots li.slick-active {
@@ -128,14 +129,14 @@ h2 {
 }
 .home-slider .slide {
   position: relative;
-  height: 700px;
+  height: 720px;
   width: 100vw;
   background-size: cover;
 }
 .home-slider .slide .slide-content {
-  height: 500px;
+  height: 540px;
   margin: 120px 0 0;
-  padding: 30px 60px;
+  padding: 30px 45px;
   background-color: #fff;
   color: #215B9C;
   opacity: 0.8;
@@ -193,7 +194,7 @@ h2 {
 .home-slider .slick-dots {
   width: 100%;
   position: absolute;
-  bottom: 120px;
+  bottom: 100px;
 }
 .home-subnav {
   padding: 15px 0;
@@ -208,7 +209,7 @@ h2 {
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .hm-video {
   width: 100%;
@@ -232,13 +233,13 @@ h2 {
 }
 .hm-pastevents-container .hm-pstevent-title {
   position: absolute;
-  top: 30px;
+  top: 0;
   left: 0;
   width: 100%;
   padding: 10px;
   letter-spacing: 5px;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -321,7 +322,7 @@ h2 {
   position: relative;
   bottom: unset;
   width: 100%;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .hm-docs-container {
   background-image: url(../img/sections/documents_bg_mobile.png);
@@ -433,8 +434,8 @@ h2 {
   background-size: cover;
 }
 .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
-  height: 600px;
-  padding: 30px 45px 120px;
+  height: 650px;
+  padding: 30px 30px 120px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer {
@@ -481,6 +482,86 @@ h2 {
 }
 .hm-social-container .social-placeholder {
   margin-bottom: 45px;
+  max-width: 100%;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .home-slider .slide {
+    height: 510px;
+  }
+  .home-slider .slide .slide-content {
+    height: 350px;
+  }
+  .hm-pastevents-container .hm-pstevent-title {
+    padding: 120px 30px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
+    height: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .home-slider .slide {
+    height: 520px;
+  }
+  .home-slider .slide .slide-content {
+    height: 350px;
+    margin: 120px 35px 0;
+    padding: 30px 90px;
+  }
+  .home-slider .slick-arrow {
+    top: 300px;
+  }
+  .home-slider .slick-arrow.slick-prev {
+    left: 60px;
+  }
+  .home-slider .slick-arrow.slick-next {
+    right: 60px;
+  }
+  .home-slider .slick-dots {
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+  }
+  .hm-pastevents-container .hm-pstevent-title {
+    top: 25%;
+    padding: 45px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .hm-docs-container .hm-docs-slider {
+    padding: 15px 0;
+  }
+  .hm-docs-container .hm-docs-slider .hm-docs-slider .hm-dc-infocontainer {
+    padding: 0 60px 0;
+  }
+  .hm-docs-container .hm-docs-slider .hm-docs-slider .hm-dc-infocontainer .hm-dc-img {
+    height: 300px;
+  }
+  .hm-docs-container .slick-prev,
+  .hm-docs-container .slick-next {
+    top: 65%;
+  }
+  .hm-docs-container .hm-docs-slider {
+    padding: 15px 0;
+  }
+  .hm-docs-container .hm-docs-slider .hm-dc-img {
+    height: 300px;
+  }
+  .hm-docs-container .hm-docs-slider .hm-dc-infocontainer {
+    margin-top: 30px;
+    padding: 0 60px 0;
+  }
+  .hm-highlights-container .hm-hg-item {
+    height: 240px;
+  }
+  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
+    height: 420px;
+  }
+  .hm-implives-container .hm-implives-slider .slick-dots {
+    bottom: 150px;
+  }
 }
 @media (min-width: 992px) {
   h2 {
@@ -492,34 +573,60 @@ h2 {
   .hm-section {
     margin: 30px 0 60px;
   }
+  .home-slider .slide {
+    height: 520px;
+  }
   .home-slider .slide .slide-content {
-    width: 60%;
-    bottom: 22%;
+    position: absolute;
+    width: 70%;
+    bottom: 12%;
     right: 0;
-    padding: 30px 240px 80px 120px;
+    margin: 0;
+    padding: 30px 60px 80px;
+  }
+  .home-slider .slide .slide-content .slide-title {
+    margin-bottom: 45px;
+    text-align: left;
   }
   .home-slider .slide .slide-content .slide-title::after {
-    left: -160px;
-    bottom: -25px;
-    width: 240px;
+    position: absolute;
+    left: -100px;
+    bottom: -15px;
+    width: 200px;
+    margin: 0;
+  }
+  .home-slider .slide .slide-content .slide-info {
+    text-align: left;
+  }
+  .home-slider .slide .slide-content .slide-anchor {
+    text-align: left;
   }
   .home-slider .slick-arrow {
     bottom: 40%;
     top: auto;
   }
-  .home-slider .slick-prev {
-    left: 800px;
+  .home-slider .slick-arrow.slick-prev {
+    right: 67%;
+    left: auto;
   }
-  .home-slider .slick-next {
-    right: 200px;
+  .home-slider .slick-arrow.slick-next {
+    right: 30px;
   }
   .home-slider .slick-dots {
-    bottom: 200px;
-    right: 500px;
+    width: 200px;
+    bottom: 100px;
+    right: 27%;
+  }
+  .home-subnav {
+    margin: -5px 0 0;
   }
   .home-subnav .nav-left a,
   .home-subnav .nav-right a {
     margin: 0 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
   }
   .home-subnav .nav-left {
     text-align: right;
@@ -527,21 +634,27 @@ h2 {
   .home-subnav .nav-right {
     text-align: left;
   }
-  .home-subnav .nav-left a,
-  .home-subnav .nav-right a {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.8rem;
+  .hm-pastevents-container .hm-pstevent-title {
+    top: 0;
+    padding: 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
-  .hm-event-slide {
+  .hm-events-container .hm-events-slider .hm-event-slide {
     padding: 0 15px;
+  }
+  .hm-events-container .hm-events-slider .slick-prev {
+    left: -15px;
+  }
+  .hm-events-container .hm-events-slider .slick-next {
+    right: -15px;
   }
   .hm-docs-container {
     background-image: url(../img/sections/documents_bg.png);
   }
   .hm-docs-container .hm-docs-slider {
-    margin: 60px -15px 90px;
+    margin: 30px -15px;
     padding: 15px;
   }
   .hm-docs-container .hm-docs-slider .hm-dc-img {
@@ -551,22 +664,42 @@ h2 {
   .hm-docs-container .hm-docs-slider .hm-dc-infocontainer {
     padding: 0;
   }
-  .hm-highlights-container .hm-hg-titlecontainer {
-    position: relative;
-    text-align: center;
+  .hm-docs-container .hm-docs-slider .hm-dc-infocontainer .hm-dc-title {
+    text-align: left;
+  }
+  .hm-docs-container .hm-docs-slider .hm-dc-infocontainer .hm-dc-info {
+    text-align: left;
+  }
+  .hm-docs-container .hm-docs-slider .hm-dc-infocontainer .btn {
+    margin: 30px 0;
+  }
+  .hm-docs-container .hm-docs-slider .slick-dots {
+    bottom: 30px;
+  }
+  .hm-docs-container .hm-docs-slider .slick-dots li button:before {
+    background-color: #215B9C;
+  }
+  .hm-docs-container .hm-docs-slider .slick-dots li.slick-active button:before {
+    background-color: #fff;
+    border-color: #215B9C;
+  }
+  .hm-docs-container .hm-docs-slider .slick-prev,
+  .hm-docs-container .hm-docs-slider .slick-next {
+    top: 46%;
+  }
+  .hm-docs-container .hm-docs-slider .slick-prev {
+    left: -30px;
+  }
+  .hm-docs-container .hm-docs-slider .slick-next {
+    right: -30px;
   }
   .hm-highlights-container .hm-hg-titlecontainer .hm-hg-title {
-    display: inline-block;
+    margin-bottom: 40px;
   }
   .hm-highlights-container .hm-hg-titlecontainer .hm-hg-title:after {
-    content: "";
-    display: block;
     position: absolute;
     left: 100px;
-    bottom: 45px;
-    width: 258px;
-    height: 6px;
-    background-color: #FFA839;
+    bottom: 12px;
   }
   .hm-implives-container .hm-implives-slider {
     margin: 30px 0 90px;
@@ -578,34 +711,54 @@ h2 {
     background-position: center center;
     background-size: cover;
   }
-  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
-    height: 350px;
-  }
-  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer {
-    position: relative;
-    text-align: center;
-  }
   .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer .hm-il-title {
-    display: inline-block;
+    margin-bottom: 30px;
   }
   .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-titlecontainer .hm-il-title:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 490px;
-    bottom: 45px;
-    width: 150px;
-    height: 6px;
-    background-color: #FFA839;
+    width: 190px;
   }
-  .hm-implives-container .slick-prev {
-    left: 290px;
+  .hm-implives-container .hm-implives-slider .slick-prev {
+    left: 15px;
   }
-  .hm-implives-container .slick-next {
-    right: 290px;
+  .hm-implives-container .hm-implives-slider .slick-next {
+    right: 15px;
   }
-  .hm-implives-container .slick-dots {
+  .hm-implives-container .hm-implives-slider .slick-dots {
     width: 100%;
-    bottom: 105px;
+    bottom: 130px;
+  }
+}
+@media (min-width: 1200px) {
+  .home-slider .slide {
+    height: 700px;
+  }
+  .home-slider .slide .slide-content {
+    position: absolute;
+    width: 65%;
+    height: 360px;
+    bottom: 20%;
+    padding: 30px 240px 80px 120px;
+  }
+  .home-slider .slide .slide-content .slide-title::after {
+    left: -160px;
+    bottom: -25px;
+    width: 240px;
+  }
+  .home-slider .slick-arrow {
+    bottom: 40%;
+    top: auto;
+  }
+  .home-slider .slick-arrow.slick-prev {
+    right: 60%;
+  }
+  .home-slider .slick-arrow.slick-next {
+    right: 11%;
+  }
+  .home-slider .slick-dots {
+    bottom: 190px;
+    right: 500px;
+  }
+  .hm-pastevents-container .hm-pstevent-title {
+    padding: 35px 20px;
   }
 }
