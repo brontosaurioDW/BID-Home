@@ -129,12 +129,12 @@ h2 {
 }
 .home-slider .slide {
   position: relative;
-  height: 720px;
+  height: 680px;
   width: 100vw;
   background-size: cover;
 }
 .home-slider .slide .slide-content {
-  height: 540px;
+  height: 500px;
   margin: 120px 0 0;
   padding: 30px 45px;
   background-color: #fff;
@@ -487,10 +487,10 @@ h2 {
 }
 @media (min-width: 576px) {
   .home-slider .slide {
-    height: 510px;
+    height: 540px;
   }
   .home-slider .slide .slide-content {
-    height: 350px;
+    height: 380px;
   }
   .hm-pastevents-container .hm-pstevent-title {
     padding: 120px 30px;
@@ -499,6 +499,12 @@ h2 {
   }
   .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
     height: 500px;
+  }
+  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-buttons {
+    margin: 20px 0;
+  }
+  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-buttons .btn {
+    margin: 0 auto 10px;
   }
 }
 @media (min-width: 768px) {
@@ -559,8 +565,16 @@ h2 {
   .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer {
     height: 420px;
   }
+  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-buttons {
+    margin: 30px 0;
+    text-align: center;
+  }
+  .hm-implives-container .hm-implives-slider .hm-il-slide .hm-il-infocontainer .hm-il-buttons .btn {
+    display: inline-block;
+    margin: 0 15px;
+  }
   .hm-implives-container .hm-implives-slider .slick-dots {
-    bottom: 150px;
+    bottom: 130px;
   }
 }
 @media (min-width: 992px) {
