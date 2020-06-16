@@ -742,7 +742,7 @@ h2 {
     bottom: 130px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .home-slider .slide {
     height: 700px;
   }
